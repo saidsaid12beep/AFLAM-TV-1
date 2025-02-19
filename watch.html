@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robyo TV - المشاهدة</title>
+    <style>
+        body {
+            background-color: black;
+            color: red;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            padding: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1;
+        }
+
+        .categories {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 70px;
+            padding: 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .categories button {
+            padding: 10px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            background-color: red;
+            color: black;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .categories button:hover {
+            background-color: black;
+            color: red;
+            border: 2px solid red;
+        }
+
+        .sections-container {
+            margin-top: 20px;
+            padding: 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .section {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            border-radius: 10px;
+            width: 90%;
+            display: block;
+        }
+
+        .posters-container {
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            gap: 10px;
+            padding: 10px;
+            justify-content: center;
+        }
+
+        .poster {
+            width: 100%;
+            max-width: 120px;
+            cursor: pointer;
+            border: 2px solid red;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .poster:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <header>Robyo TV</header>
+
+    <div class="categories">
+        <button onclick="showSection('films')">أفلام</button>
+        <button onclick="showSection('series')">مسلسلات</button>
+        <button onclick="showSection('cartoons')">أفلام كرتون</button>
+    </div>
+
+    <div class="sections-container">
+        <div class="section" id="films">
+            <h2>أفلام</h2>
+            <div class="posters-container">
+                <img src="SUNS.avif" alt="فيلم جديد 1" class="poster">
+                <img src="LEGEND.jfif" alt="فيلم جديد 2" class="poster">
+                <img src="KUB.jpg" alt="فيلم جديد 3" class="poster">
+                <img src="MS.webp" alt="فيلم جديد 4" class="poster">
+                <img src="ME.jpg" alt="فيلم جديد 5" class="poster">
+                <img src="new6.jpg" alt="فيلم جديد 6" class="poster">
+                <img src="new7.jpg" alt="فيلم جديد 7" class="poster">
+                <img src="new8.jpg" alt="فيلم جديد 8" class="poster">
+                <img src="new9.jpg" alt="فيلم جديد 9" class="poster">
+                <img src="new10.jpg" alt="فيلم جديد 10" class="poster">
+                <img src="new11.jpg" alt="فيلم جديد 11" class="poster">
+                <img src="TENT.jpg" alt="فيلم جديد 12" class="poster">
+                <img src="baaad.jpg" alt="فيلم جديد 13" class="poster">
+                <img src="fury.jpg" alt="فيلم جديد 14" class="poster">
+                <img src="SUNS.avif" alt="فيلم جديد 15" class="poster">
+                <img src="new16.jpg" alt="فيلم جديد 16" class="poster">
+                <img src="new17.jpg" alt="فيلم جديد 17" class="poster">
+                <img src="new18.jpg" alt="فيلم جديد 18" class="poster">
+                <img src="new19.jpg" alt="فيلم جديد 19" class="poster">
+                <img src="new20.jpg" alt="فيلم جديد 20" class="poster">
+                <img src="MOV.jpg" alt="فيلم جديد 21" class="poster">
+                <img src="MS.webp" alt="فيلم جديد 22" class="poster">
+                <img src="MOV.jpg" alt="فيلم جديد 23" class="poster">
+                <img src="LEGEND.jfif" alt="فيلم جديد 24" class="poster">
+                <img src="fury.jpg" alt="فيلم جديد 25" class="poster">
+                <img src="new26.jpg" alt="فيلم جديد 26" class="poster">
+                <img src="new27.jpg" alt="فيلم جديد 27" class="poster">
+                <img src="new28.jpg" alt="فيلم جديد 28" class="poster">
+                <img src="new29.jpg" alt="فيلم جديد 29" class="poster">
+                <img src="new30.jpg" alt="فيلم جديد 30" class="poster">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.section').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
